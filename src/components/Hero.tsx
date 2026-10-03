@@ -101,6 +101,31 @@ export default function Hero({ isDark }: HeroProps) {
           </a>
         </motion.div>
 
+        {/* Development Status Badge */}
+        <motion.div
+          className="mt-6 inline-flex items-center gap-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+        >
+          <span className="relative flex h-2 w-2">
+            <span
+              className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"
+              style={{ backgroundColor: '#f59e0b' }}
+            />
+            <span
+              className="relative inline-flex h-2 w-2 rounded-full"
+              style={{ backgroundColor: '#f59e0b' }}
+            />
+          </span>
+          <span
+            className="text-xs font-medium tracking-wide"
+            style={{ color: isDark ? '#737373' : '#a3a3a3' }}
+          >
+            Aun En Desarrollo
+          </span>
+        </motion.div>
+
         {/* Stats */}
         <motion.div
           className="mt-20 grid grid-cols-3 gap-8 border-t pt-10"
