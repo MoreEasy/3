@@ -101,34 +101,64 @@ export default function Hero({ isDark }: HeroProps) {
           </a>
         </motion.div>
 
-        {/* Development Status Badge */}
-        <motion.div
-          className="mx-auto mt-8 inline-flex items-center gap-2.5 rounded-full border px-4 py-2"
-          style={{
-            borderColor: isDark ? '#262626' : '#e5e5e5',
-            backgroundColor: isDark ? 'rgba(23, 23, 23, 0.6)' : 'rgba(245, 245, 245, 0.6)',
-          }}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-        >
-          <span className="relative flex h-2.5 w-2.5">
-            <span
-              className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"
-              style={{ backgroundColor: '#f97316' }}
-            />
-            <span
-              className="relative inline-flex h-2.5 w-2.5 rounded-full"
-              style={{ backgroundColor: '#f97316' }}
-            />
-          </span>
-          <span
-            className="text-xs font-medium tracking-wide"
-            style={{ color: isDark ? '#a3a3a3' : '#737373' }}
+        {/* Development Status Badges */}
+        <div className="mx-auto mt-8 flex flex-col items-center gap-3">
+          <motion.div
+            className="inline-flex items-center gap-2.5 rounded-full border px-4 py-2"
+            style={{
+              borderColor: isDark ? '#262626' : '#e5e5e5',
+              backgroundColor: isDark ? 'rgba(23, 23, 23, 0.6)' : 'rgba(245, 245, 245, 0.6)',
+            }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
           >
-            Aún En Desarrollo
-          </span>
-        </motion.div>
+            <span className="relative flex h-2.5 w-2.5">
+              <span
+                className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"
+                style={{ backgroundColor: '#f97316' }}
+              />
+              <span
+                className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                style={{ backgroundColor: '#f97316' }}
+              />
+            </span>
+            <span
+              className="text-xs font-medium tracking-wide"
+              style={{ color: isDark ? '#a3a3a3' : '#737373' }}
+            >
+              Aún En Desarrollo
+            </span>
+          </motion.div>
+
+          <motion.div
+            className="inline-flex items-center gap-2.5 rounded-full border px-4 py-2"
+            style={{
+              borderColor: isDark ? '#262626' : '#e5e5e5',
+              backgroundColor: isDark ? 'rgba(23, 23, 23, 0.6)' : 'rgba(245, 245, 245, 0.6)',
+            }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.95 }}
+          >
+            <span className="relative flex h-2.5 w-2.5">
+              <span
+                className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"
+                style={{ backgroundColor: '#3b82f6' }}
+              />
+              <span
+                className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                style={{ backgroundColor: '#3b82f6' }}
+              />
+            </span>
+            <span
+              className="text-xs font-medium tracking-wide"
+              style={{ color: isDark ? '#a3a3a3' : '#737373' }}
+            >
+              Asistente Personal En Desarrollo
+            </span>
+          </motion.div>
+        </div>
 
         {/* Stats */}
         <motion.div
