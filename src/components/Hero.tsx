@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import HeroVisual from './HeroVisual';
 
 interface HeroProps {
   isDark: boolean;
@@ -8,7 +7,7 @@ interface HeroProps {
 
 export default function Hero({ isDark }: HeroProps) {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20 pb-16">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20">
       {/* Background subtle grid */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -160,9 +159,6 @@ export default function Hero({ isDark }: HeroProps) {
             </span>
           </motion.div>
         </div>
-
-        {/* Hero Visual - AI Assistant Image */}
-        <HeroVisual isDark={isDark} />
 
         {/* Stats */}
         <motion.div
